@@ -11,7 +11,6 @@ import UIKit
 public struct PickerView {
     public static func countryPickerView() -> UIPickerView {
         let pickerView = UIPickerView()
-        pickerView.showsSelectionIndicator = true
         pickerView.backgroundColor = ColorKit.backgroundColor.value
         return pickerView
     }
