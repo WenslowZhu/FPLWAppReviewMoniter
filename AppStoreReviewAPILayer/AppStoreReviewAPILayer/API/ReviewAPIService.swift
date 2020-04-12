@@ -29,9 +29,9 @@ class ReviewAPIService: ReviewAPILayer {
         }
 //        print(urlString)
         return Observable<[ReviewResponse]>.create({ (observer) -> Disposable in
-            
-            Alamofire.request(urlString).responseData { response in
-                if let data = response.result.value {
+            AF.request(urlString).responseData { response in
+                switch response.result {
+                case .success(let data):
                     do {
                         let value = try JSONDecoder().decode(ReviewSearchResult.self, from: data)
                         observer.onNext(value.feed.entrys)
@@ -39,7 +39,7 @@ class ReviewAPIService: ReviewAPILayer {
                         observer.onNext([])
                         print(error)
                     }
-                } else {
+                case .failure(_):
                     observer.onNext([])
                 }
             }

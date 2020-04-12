@@ -30,9 +30,9 @@ class AppSearchAPIService: AppSearchAPILayer {
 //        print(urlString)
         return Observable<[AppSearchResponse]>.create({ (observer) -> Disposable in
             
-            Alamofire.request(urlString).responseData { response in
-                
-                if let data = response.result.value {
+            AF.request(urlString).responseData { response in
+                switch response.result {
+                case .success(let data):
                     do {
                         let value = try JSONDecoder().decode(AppSearchResult.self, from: data)
                         observer.onNext(value.results)
@@ -40,7 +40,7 @@ class AppSearchAPIService: AppSearchAPILayer {
                         observer.onNext([])
                         print(error)
                     }
-                } else {
+                case .failure(_):
                     observer.onNext([])
                 }
             }
