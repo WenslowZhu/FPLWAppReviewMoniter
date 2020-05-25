@@ -85,7 +85,7 @@ class AppListTableViewCell: UITableViewCell {
         genresLabel.text = appModel.genres.joined(separator: ", ")
         artistNameLabel.text = appModel.artistName
         ratingView.rating = appModel.averageUserRating ?? 0
-        averageRatingLabel.text = String(appModel.averageUserRating ?? 0)
+        averageRatingLabel.text = String(format: "%0.1f", appModel.averageUserRating ?? 0.0)
         guard let url = URL(string: appModel.iconURLString) else { return }
         appIconImageView.kf.setImage(with: url, options: [.transition(.fade(0.2))])
     }

@@ -86,6 +86,14 @@ class AppSearchViewController: UIViewController {
             .subscribe(onNext: { [unowned self] (indexPath) in
                 self.tableView.deselectRow(at: indexPath, animated: true)
             }).disposed(by: disposeBag)
+        
+        searchController.searchBar.rx.searchButtonClicked
+            .asDriver()
+            .drive(onNext: { [unowned self]  (_) in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.searchController.isActive = false
+                }
+            }).disposed(by: disposeBag)
     }
     
     func bindViewModel() {
