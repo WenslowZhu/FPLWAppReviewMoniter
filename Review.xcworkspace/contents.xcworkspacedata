@@ -19,7 +19,4 @@
    <FileRef
       location = "group:Review.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
 </Workspace>
