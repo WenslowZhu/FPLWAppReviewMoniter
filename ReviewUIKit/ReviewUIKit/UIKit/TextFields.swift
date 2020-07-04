@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RxCocoa
 import RxSwift
+import RxCocoa
 
 public struct TextFields {
     public static func uneditableTextField() -> UITextField {

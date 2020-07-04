@@ -24,7 +24,6 @@
 		3B7E0D2222FB01D200593EB1 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D2122FB01D200593EB1 /* Views.swift */; };
 		3B7E0D2D22FB02A000593EB1 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D2C22FB02A000593EB1 /* TextFields.swift */; };
 		3B7E0D3322FB081C00593EB1 /* LightContentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D3222FB081C00593EB1 /* LightContentNavigationController.swift */; };
-		3BA82A7124AFAC920050B9A5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA82A7024AFAC920050B9A5 /* RxCocoa */; };
 		3BA82A8A24B011280050B9A5 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82A7824B011280050B9A5 /* StarFillMode.swift */; };
 		3BA82A8B24B011280050B9A5 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82A7924B011280050B9A5 /* StarLayer.swift */; };
 		3BA82A8C24B011280050B9A5 /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82A7A24B011280050B9A5 /* CosmosAccessibility.swift */; };
@@ -40,7 +39,7 @@
 		3BA82A9724B011280050B9A5 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82A8624B011280050B9A5 /* CosmosTouchTarget.swift */; };
 		3BA82A9824B011280050B9A5 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82A8724B011280050B9A5 /* RightToLeft.swift */; };
 		3BA82A9A24B011280050B9A5 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82A8924B011280050B9A5 /* CosmosView.swift */; };
-		3BBE8A7524AF9E0A00B77EAE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A7424AF9E0A00B77EAE /* RxSwift */; };
+		3BA82AA924B01E280050B9A5 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48803952306A751003478DC /* ReviewHelperKit.framework */; };
 		D488037E23068D2A003478DC /* ChangeAPPICONView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488037D23068D2A003478DC /* ChangeAPPICONView.swift */; };
 		D4880384230699FB003478DC /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4880383230699FB003478DC /* Buttons.swift */; };
 		D4A7BA9222FD10220079A041 /* PickerViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A7BA9122FD10220079A041 /* PickerViews.swift */; };
@@ -67,13 +66,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3B13D1F222F7D9D000FE6107;
 			remoteInfo = ReviewHelperKitTests;
-		};
-		D48803982306A756003478DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D488038F2306A751003478DC /* ReviewHelperKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
-			remoteInfo = ReviewHelperKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -123,8 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA82A7124AFAC920050B9A5 /* RxCocoa in Frameworks */,
-				3BBE8A7524AF9E0A00B77EAE /* RxSwift in Frameworks */,
+				3BA82AA924B01E280050B9A5 /* ReviewHelperKit.framework in Frameworks */,
 				3B79D0E424AF9932006EE9D0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,13 +282,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				D48803992306A756003478DC /* PBXTargetDependency */,
 			);
 			name = ReviewUIKit;
 			packageProductDependencies = (
 				3B79D0E324AF9932006EE9D0 /* SnapKit */,
-				3BBE8A7424AF9E0A00B77EAE /* RxSwift */,
-				3BA82A7024AFAC920050B9A5 /* RxCocoa */,
 			);
 			productName = ReviewUIKit;
 			productReference = 3B7E0CF222FAFEA500593EB1 /* ReviewUIKit.framework */;
@@ -457,11 +445,6 @@
 			isa = PBXTargetDependency;
 			target = 3B7E0CF122FAFEA500593EB1 /* ReviewUIKit */;
 			targetProxy = 3B7E0CFD22FAFEA500593EB1 /* PBXContainerItemProxy */;
-		};
-		D48803992306A756003478DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReviewHelperKit;
-			targetProxy = D48803982306A756003478DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -737,16 +720,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B79D0E224AF9932006EE9D0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		3BA82A7024AFAC920050B9A5 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A7324AF9E0A00B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		3BBE8A7424AF9E0A00B77EAE /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A7324AF9E0A00B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

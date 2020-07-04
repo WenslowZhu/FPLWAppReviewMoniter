@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA82AAB24B01E430050B9A5 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC1526F22F85D7700FA3F50 /* ReviewHelperKit.framework */; };
 		3BAB87B222F8812B00B0CABD /* CacheKitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB87B122F8812B00B0CABD /* CacheKitFactory.swift */; };
-		3BBE8A7F24AF9F2C00B77EAE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A7E24AF9F2C00B77EAE /* RxSwift */; };
 		3BBE8A8324AFA11700B77EAE /* CoreStore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A8224AFA11700B77EAE /* CoreStore */; };
 		3BC1524922F85BA500FA3F50 /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC1523F22F85BA500FA3F50 /* CacheKit.framework */; };
 		3BC1524E22F85BA500FA3F50 /* CacheKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1524D22F85BA500FA3F50 /* CacheKitTests.swift */; };
@@ -39,13 +39,6 @@
 			remoteGlobalIDString = 3B13D1F222F7D9D000FE6107;
 			remoteInfo = ReviewHelperKitTests;
 		};
-		3BC1527222F85D7C00FA3F50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BC1526922F85D7700FA3F50 /* ReviewHelperKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
-			remoteInfo = ReviewHelperKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBE8A7F24AF9F2C00B77EAE /* RxSwift in Frameworks */,
+				3BA82AAB24B01E430050B9A5 /* ReviewHelperKit.framework in Frameworks */,
 				3BBE8A8324AFA11700B77EAE /* CoreStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA82AAA24B01E430050B9A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BC1523522F85BA500FA3F50 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +91,7 @@
 				3BC1524122F85BA500FA3F50 /* CacheKit */,
 				3BC1524C22F85BA500FA3F50 /* CacheKitTests */,
 				3BC1524022F85BA500FA3F50 /* Products */,
+				3BA82AAA24B01E430050B9A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,11 +168,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				3BC1527322F85D7C00FA3F50 /* PBXTargetDependency */,
 			);
 			name = CacheKit;
 			packageProductDependencies = (
-				3BBE8A7E24AF9F2C00B77EAE /* RxSwift */,
 				3BBE8A8224AFA11700B77EAE /* CoreStore */,
 			);
 			productName = CacheKit;
@@ -303,11 +302,6 @@
 			isa = PBXTargetDependency;
 			target = 3BC1523E22F85BA500FA3F50 /* CacheKit */;
 			targetProxy = 3BC1524A22F85BA500FA3F50 /* PBXContainerItemProxy */;
-		};
-		3BC1527322F85D7C00FA3F50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReviewHelperKit;
-			targetProxy = 3BC1527222F85D7C00FA3F50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -576,11 +570,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3BBE8A7E24AF9F2C00B77EAE /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A7D24AF9F2C00B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		3BBE8A8224AFA11700B77EAE /* CoreStore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3BBE8A8124AFA11700B77EAE /* XCRemoteSwiftPackageReference "CoreStore" */;

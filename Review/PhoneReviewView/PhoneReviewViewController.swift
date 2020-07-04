@@ -44,7 +44,9 @@ class PhoneReviewViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        refreshUI()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.refreshUI()
+        }
     }
 
     private func setNavigationBar() {
@@ -77,9 +79,9 @@ class PhoneReviewViewController: UIViewController {
         currentAppID = id
 
         viewModel.fetchApp(appID: id)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] in
-                guard let app = $0 else { return }
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] in
+                guard let app = $0, let self = self else { return }
                 self.title = app.appName
                 if self.reviewVC == nil {
                     self.setCurrentVC(appInfoModel: app)

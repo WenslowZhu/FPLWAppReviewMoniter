@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA82AAC24B01E560050B9A5 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAB879322F87A2600B0CABD /* ReviewHelperKit.framework */; };
 		3BAB877222F8797F00B0CABD /* AppStoreReviewAPILayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAB876822F8797E00B0CABD /* AppStoreReviewAPILayer.framework */; };
 		3BAB877722F8797F00B0CABD /* AppStoreReviewAPILayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB877622F8797F00B0CABD /* AppStoreReviewAPILayerTests.swift */; };
 		3BAB877922F8797F00B0CABD /* AppStoreReviewAPILayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAB876B22F8797E00B0CABD /* AppStoreReviewAPILayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -15,7 +16,6 @@
 		3BAB878A22F8799500B0CABD /* AppSearchAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB878622F8799500B0CABD /* AppSearchAPIService.swift */; };
 		3BAB878B22F8799500B0CABD /* ReviewAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB878722F8799500B0CABD /* ReviewAPIService.swift */; };
 		3BAB87B022F87C0600B0CABD /* AppStoreReviewAPILayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB87AF22F87C0600B0CABD /* AppStoreReviewAPILayerFactory.swift */; };
-		3BBE8A8624AFA13F00B77EAE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A8524AFA13F00B77EAE /* RxSwift */; };
 		3BBE8A8A24AFA28100B77EAE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A8924AFA28100B77EAE /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -41,13 +41,6 @@
 			remoteGlobalIDString = 3B13D1F222F7D9D000FE6107;
 			remoteInfo = ReviewHelperKitTests;
 		};
-		3BAB879622F87A2B00B0CABD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BAB878D22F87A2600B0CABD /* ReviewHelperKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
-			remoteInfo = ReviewHelperKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBE8A8624AFA13F00B77EAE /* RxSwift in Frameworks */,
+				3BA82AAC24B01E560050B9A5 /* ReviewHelperKit.framework in Frameworks */,
 				3BBE8A8A24AFA28100B77EAE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +79,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA82A9F24B01B9D0050B9A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BAB875E22F8797E00B0CABD = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +93,7 @@
 				3BAB876A22F8797E00B0CABD /* AppStoreReviewAPILayer */,
 				3BAB877522F8797F00B0CABD /* AppStoreReviewAPILayerTests */,
 				3BAB876922F8797E00B0CABD /* Products */,
+				3BA82A9F24B01B9D0050B9A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,11 +188,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				3BAB879722F87A2B00B0CABD /* PBXTargetDependency */,
 			);
 			name = AppStoreReviewAPILayer;
 			packageProductDependencies = (
-				3BBE8A8524AFA13F00B77EAE /* RxSwift */,
 				3BBE8A8924AFA28100B77EAE /* Alamofire */,
 			);
 			productName = AppStoreReviewAPILayer;
@@ -325,11 +324,6 @@
 			isa = PBXTargetDependency;
 			target = 3BAB876722F8797E00B0CABD /* AppStoreReviewAPILayer */;
 			targetProxy = 3BAB877322F8797F00B0CABD /* PBXContainerItemProxy */;
-		};
-		3BAB879722F87A2B00B0CABD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReviewHelperKit;
-			targetProxy = 3BAB879622F87A2B00B0CABD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -598,11 +592,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3BBE8A8524AFA13F00B77EAE /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A8424AFA13F00B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		3BBE8A8924AFA28100B77EAE /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3BBE8A8824AFA28100B77EAE /* XCRemoteSwiftPackageReference "Alamofire" */;

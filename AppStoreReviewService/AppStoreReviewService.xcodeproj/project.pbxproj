@@ -11,8 +11,7 @@
 		3B13D21A22F7DACB00FE6107 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21822F7DACA00FE6107 /* ReviewService.swift */; };
 		3B13D21E22F7DAD600FE6107 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */; };
 		3B13D21F22F7DAD600FE6107 /* AppInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21D22F7DAD500FE6107 /* AppInfoModel.swift */; };
-		3BA82A7424AFACB60050B9A5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA82A7324AFACB60050B9A5 /* RxCocoa */; };
-		3BBE8A9424AFA89800B77EAE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A9324AFA89800B77EAE /* RxSwift */; };
+		3BA82AAD24B01E650050B9A5 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B13D20C22F7DA5200FE6107 /* ReviewHelperKit.framework */; };
 		3BC1523322F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */; };
 		3BCB8AB622F67EA900BAA401 /* AppStoreReviewService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */; };
 		3BCB8ABB22F67EA900BAA401 /* AppStoreReviewServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB8ABA22F67EA900BAA401 /* AppStoreReviewServiceTests.swift */; };
@@ -33,13 +32,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3B13D1F222F7D9D000FE6107;
 			remoteInfo = ReviewHelperKitTests;
-		};
-		3B13D20F22F7DA5800FE6107 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B13D20622F7DA5200FE6107 /* ReviewHelperKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
-			remoteInfo = ReviewHelperKit;
 		};
 		3BAB879D22F87AAF00B0CABD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -136,8 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA82A7424AFACB60050B9A5 /* RxCocoa in Frameworks */,
-				3BBE8A9424AFA89800B77EAE /* RxSwift in Frameworks */,
+				3BA82AAD24B01E650050B9A5 /* ReviewHelperKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +285,9 @@
 				3BC13D342307CF0100276DDA /* PBXTargetDependency */,
 				3BAB87AE22F87B4900B0CABD /* PBXTargetDependency */,
 				3BAB87A322F87AB500B0CABD /* PBXTargetDependency */,
-				3B13D21022F7DA5800FE6107 /* PBXTargetDependency */,
 			);
 			name = AppStoreReviewService;
 			packageProductDependencies = (
-				3BBE8A9324AFA89800B77EAE /* RxSwift */,
-				3BA82A7324AFACB60050B9A5 /* RxCocoa */,
 			);
 			productName = AppStoreReviewService;
 			productReference = 3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */;
@@ -481,11 +469,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B13D21022F7DA5800FE6107 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReviewHelperKit;
-			targetProxy = 3B13D20F22F7DA5800FE6107 /* PBXContainerItemProxy */;
-		};
 		3BAB87A322F87AB500B0CABD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppStoreReviewAPILayer;
@@ -763,19 +746,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3BA82A7324AFACB60050B9A5 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A9224AFA89800B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		3BBE8A9324AFA89800B77EAE /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A9224AFA89800B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BCB8AA322F67EA800BAA401 /* Project object */;
 }
