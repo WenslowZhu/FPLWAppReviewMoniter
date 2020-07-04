@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82ECBCFE21DD077800900188"
-               BuildableName = "Review-app.app"
-               BlueprintName = "Review-app"
-               ReferencedContainer = "container:Review.xcodeproj">
+               BlueprintIdentifier = "3B7E0CF122FAFEA500593EB1"
+               BuildableName = "ReviewUIKit.framework"
+               BlueprintName = "ReviewUIKit"
+               ReferencedContainer = "container:ReviewUIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B7E0CFA22FAFEA500593EB1"
+               BuildableName = "ReviewUIKitTests.xctest"
+               BlueprintName = "ReviewUIKitTests"
+               ReferencedContainer = "container:ReviewUIKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -40,16 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82ECBCFE21DD077800900188"
-            BuildableName = "Review-app.app"
-            BlueprintName = "Review-app"
-            ReferencedContainer = "container:Review.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82ECBCFE21DD077800900188"
-            BuildableName = "Review-app.app"
-            BlueprintName = "Review-app"
-            ReferencedContainer = "container:Review.xcodeproj">
+            BlueprintIdentifier = "3B7E0CF122FAFEA500593EB1"
+            BuildableName = "ReviewUIKit.framework"
+            BlueprintName = "ReviewUIKit"
+            ReferencedContainer = "container:ReviewUIKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

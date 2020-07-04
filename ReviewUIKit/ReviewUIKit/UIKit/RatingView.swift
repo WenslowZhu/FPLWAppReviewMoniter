@@ -6,8 +6,6 @@
 //  Copyright © 2019 朱廷. All rights reserved.
 //
 
-import Cosmos
-
 public class RatingView: CosmosView {
     
     public static func fiveStartRatingView() -> RatingView {

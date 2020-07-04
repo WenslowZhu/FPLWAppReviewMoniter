@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		3B13D21A22F7DACB00FE6107 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21822F7DACA00FE6107 /* ReviewService.swift */; };
 		3B13D21E22F7DAD600FE6107 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */; };
 		3B13D21F22F7DAD600FE6107 /* AppInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21D22F7DAD500FE6107 /* AppInfoModel.swift */; };
+		3BA82A7424AFACB60050B9A5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA82A7324AFACB60050B9A5 /* RxCocoa */; };
+		3BBE8A9424AFA89800B77EAE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A9324AFA89800B77EAE /* RxSwift */; };
 		3BC1523322F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */; };
 		3BCB8AB622F67EA900BAA401 /* AppStoreReviewService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */; };
 		3BCB8ABB22F67EA900BAA401 /* AppStoreReviewServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB8ABA22F67EA900BAA401 /* AppStoreReviewServiceTests.swift */; };
@@ -134,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA82A7424AFACB60050B9A5 /* RxCocoa in Frameworks */,
+				3BBE8A9424AFA89800B77EAE /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +190,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3BA82A7224AFACB60050B9A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BAB879922F87AAF00B0CABD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +231,7 @@
 				3BCB8AAE22F67EA800BAA401 /* AppStoreReviewService */,
 				3BCB8AB922F67EA900BAA401 /* AppStoreReviewServiceTests */,
 				3BCB8AAD22F67EA800BAA401 /* Products */,
+				3BA82A7224AFACB60050B9A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +297,10 @@
 				3B13D21022F7DA5800FE6107 /* PBXTargetDependency */,
 			);
 			name = AppStoreReviewService;
+			packageProductDependencies = (
+				3BBE8A9324AFA89800B77EAE /* RxSwift */,
+				3BA82A7324AFACB60050B9A5 /* RxCocoa */,
+			);
 			productName = AppStoreReviewService;
 			productReference = 3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */;
 			productType = "com.apple.product-type.framework";
@@ -314,8 +330,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "朱廷";
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = ZhuTIng;
 				TargetAttributes = {
 					3BCB8AAB22F67EA800BAA401 = {
 						CreatedOnToolsVersion = 11.0;
@@ -334,6 +350,9 @@
 				Base,
 			);
 			mainGroup = 3BCB8AA222F67EA800BAA401;
+			packageReferences = (
+				3BBE8A9224AFA89800B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 3BCB8AAD22F67EA800BAA401 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -516,6 +535,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -579,6 +599,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -618,7 +639,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = AppStoreReviewService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -630,6 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tz.AppStoreReviewService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -643,7 +665,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = AppStoreReviewService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -655,6 +677,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tz.AppStoreReviewService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -729,6 +752,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BBE8A9224AFA89800B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BA82A7324AFACB60050B9A5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BBE8A9224AFA89800B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3BBE8A9324AFA89800B77EAE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BBE8A9224AFA89800B77EAE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BCB8AA322F67EA800BAA401 /* Project object */;
 }
