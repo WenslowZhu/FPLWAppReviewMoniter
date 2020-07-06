@@ -41,7 +41,11 @@ public enum FordColor: String, Codable, CaseIterable {
 
 extension FordColor {
     
-    public var hexColor: Color {
+    public var hexColor: UIColor {
+        return UIColor(named: "Ford/\(fordColorAssetName)") ?? UIColor.red
+    }
+    
+    public var color: Color {
         return Color("Ford/\(fordColorAssetName)")
     }
     
