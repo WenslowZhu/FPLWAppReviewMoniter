@@ -7,23 +7,49 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct HomeView: View {
     
+    @State var longPressSwitch = LongPressSwitch.default
+    
     init() {
-        UINavigationBar.appearance().barTintColor = FordColor.bg_100.hexColor
+        UINavigationBar.appearance().barTintColor = FordColor.background.hexColor
         
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: FordColor.text_100.hexColor]
     }
     
     var body: some View {
         NavigationView {
-            VStack {
-                KFImage(URL(string: FordHomeImageURL.homeBackground.urlString))
-                    .resizable()
+            ZStack {
+                FordColor.background.color
+                VStack {
+                    Image(FordICONProvider.home.vehicle)
+                        .padding()
+                    
+                    HStack {
+                        RemoteControlButton(longPressSwitch: $longPressSwitch,
+                                            defaultImage: FordICONProvider.home.blueCooling,
+                                            successImage: FordICONProvider.home.blueCoolingSucceed)
+                            .frame(width: 80, height: 80, alignment: .center)
+                        
+                        RemoteControlButton(longPressSwitch: $longPressSwitch,
+                                            defaultImage: FordICONProvider.home.blueLock,
+                                            successImage: FordICONProvider.home.blueLockSucceed)
+                            .frame(width: 90, height: 90, alignment: .center)
+                        
+                        RemoteControlButton(longPressSwitch: $longPressSwitch,
+                                            defaultImage: FordICONProvider.home.blueUnlock,
+                                            successImage: FordICONProvider.home.blueUnlockSucceed)
+                            .frame(width: 90, height: 90, alignment: .center)
+
+                        RemoteControlButton(longPressSwitch: $longPressSwitch,
+                                            defaultImage: FordICONProvider.home.blueHeating,
+                                            successImage: FordICONProvider.home.blueHeatingSucceed)
+                            .frame(width: 80, height: 80, alignment: .center)
+                    }
+                }
             }
-            .navigationBarTitle(Text("首页"),
+            .navigationBarTitle(Text(TranslationProvider.home.title),
                                 displayMode: .inline)
         }
     }
@@ -35,5 +61,16 @@ struct HomeView_Previews: PreviewProvider {
             HomeView()
                 .preferredColorScheme(.dark)
         }
+    }
+}
+
+struct LongPressSwitch {
+    
+    var isLongPress = false
+    
+    static let `default` = Self(isLongPress: false)
+    
+    init(isLongPress: Bool) {
+        self.isLongPress = isLongPress
     }
 }

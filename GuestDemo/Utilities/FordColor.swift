@@ -10,26 +10,47 @@ import SwiftUI
 public enum FordColor: String, Codable, CaseIterable {
     /// Brand Color
     case primary_blue
-    case primary_dark
-    case primary_light
+    case primary_blue_clicked
+    case primary_blue_outline
+    case primary_blue_30
 
     /// Feedback Color
     case success_green
+    case success_green_15
     case warning_orange
+    case warning_orange_15
     case error_red
 
     /// Background Color
-    case bg_100
+    case background
+    case background_card
 
     /// Card Color
-    case card_100
+    case card
+
+    /// Disabled Button Color
+    case disable_gray_50
+    case disable_gray_outline_50
+
+    /// Preload Color
+    case preload
+
+    /// Separator Color
+    case separator
+
+    /// Mask Color
+    case mask
+
+    /// Progress Color
+    case progress
+
+    /// Dropdown Color
+    case dropdown
 
     /// Icon Color
     case icon_100
-
-    /// Disabled Button Color
-    case disable_button
-    case disable_outline
+    case icon_60
+    case icon_30
 
     /// Text Color
     case text_100
@@ -37,54 +58,21 @@ public enum FordColor: String, Codable, CaseIterable {
     case text_60
     case text_50
     case text_30
+
+    /// Clean
+    case clean
 }
 
 extension FordColor {
     
     public var hexColor: UIColor {
-        return UIColor(named: "Ford/\(fordColorAssetName)") ?? UIColor.red
+        return UIColor(named: "Ford/\(self.rawValue)", in: Bundle(for: AClass.self), compatibleWith: nil) ?? UIColor.red
     }
     
     public var color: Color {
-        return Color("Ford/\(fordColorAssetName)")
-    }
-    
-    private var fordColorAssetName: String {
-        switch self {
-        case .primary_blue:
-            return "primary_blue"
-        case .primary_dark:
-            return "primary_dark"
-        case .primary_light:
-            return "primary_light"
-        case .success_green:
-            return "success_green"
-        case .warning_orange:
-            return "warning_orange"
-        case .error_red:
-            return "error_red"
-        case .bg_100:
-            return "bg_100"
-        case .card_100:
-            return "card_100"
-        case .icon_100:
-            return "icon_100"
-        case .disable_button:
-            return "disable_button"
-        case .disable_outline:
-            return "disable_outline"
-        case .text_100:
-            return "text_100"
-        case .text_85:
-            return "text_85"
-        case .text_60:
-            return "text_60"
-        case .text_50:
-            return "text_50"
-        case .text_30:
-            return "text_30"
-        }
+        return Color("Ford/\(self.rawValue)")
     }
 }
 
 fileprivate class AClass {}
+

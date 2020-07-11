@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var selection = 0
     
     init() {
-        UITabBar.appearance().barTintColor = FordColor.bg_100.hexColor
+        UITabBar.appearance().barTintColor = FordColor.background.hexColor
     }
     
     var body: some View {
@@ -21,20 +21,67 @@ struct ContentView: View {
             HomeView()
                 .tabItem {
                     if selection == 0 {
-                        Image("tabBar/home_active")
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.homeActive,
+                                        isActive: true)
                     } else {
-                        Image("tabBar/home_inactive")
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.homeInactice,
+                                        isActive: false)
                     }
-                    Text("Home")
+                    Text(TranslationProvider.home.title)
                 }
                 .tag(0)
             
             HomeView()
                 .tabItem {
-                    Image("tabBar/home_active")
-                    Text("Home")
+                    if selection == 1 {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.vehicleActive,
+                                        isActive: true)
+                    } else {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.vehicleInactive,
+                                        isActive: true)
+                    }
+                    Text("车辆")
                 }
                 .tag(1)
+            
+            HomeView()
+                .tabItem {
+                    if selection == 2 {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.mapActive,
+                                        isActive: true)
+                    } else {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.mapInactive,
+                                        isActive: true)
+                    }
+                    Text("地图")
+                }
+                .tag(2)
+            
+            HomeView()
+                .tabItem {
+                    if selection == 3 {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.serviceActive,
+                                        isActive: true)
+                    } else {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.serviceInactive,
+                                        isActive: true)
+                    }
+                    Text("服务")
+                }
+                .tag(3)
+            
+            HomeView()
+                .tabItem {
+                    if selection == 4 {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.mallActice,
+                                        isActive: true)
+                    } else {
+                        TabBarImageView(imageName: FordICONProvider.tabBarICON.mallInactive,
+                                        isActive: true)
+                    }
+                    Text("商城")
+                }
+                .tag(4)
         }
         .accentColor(FordColor.text_100.color)
     }

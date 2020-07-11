@@ -1,0 +1,6 @@
+github "tattn/Alamofire" "hotfix-xcode12"
+github "ReactiveX/RxSwift" ~> 5.1.1
+github "evgenyneu/Cosmos" ~> 22.0
+github "SnapKit/SnapKit" ~> 5.0.0
+github "onevcat/Kingfisher" ~> 5.0
+github "JohnEstropia/CoreStore" ~> 7.1.0

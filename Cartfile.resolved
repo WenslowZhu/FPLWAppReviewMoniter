@@ -1,0 +1,5 @@
+github "JohnEstropia/CoreStore" "7.2.0"
+github "ReactiveX/RxSwift" "5.1.1"
+github "SnapKit/SnapKit" "5.0.1"
+github "onevcat/Kingfisher" "5.14.1"
+github "tattn/Alamofire" "22541640708e1ead9b0a2b09e973709359d12d98"

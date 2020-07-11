@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2C768B24BA169B00B26394 /* TabBarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768A24BA169B00B26394 /* TabBarImageView.swift */; };
+		3B2C768D24BA179900B26394 /* FordICONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768C24BA179900B26394 /* FordICONProvider.swift */; };
+		3B2C768F24BA199800B26394 /* TranslationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768E24BA199800B26394 /* TranslationProvider.swift */; };
+		3B2C769124BA1D5A00B26394 /* RemoteControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C769024BA1D5A00B26394 /* RemoteControlButton.swift */; };
 		3B9DAC9124B36BDB009732D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DAC9024B36BDB009732D3 /* HomeView.swift */; };
-		3B9DAD7F24B370FA009732D3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9DAD7E24B370FA009732D3 /* KingfisherSwiftUI */; };
 		3B9DAE6B24B371E1009732D3 /* ImageURLStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DAE6A24B371E1009732D3 /* ImageURLStore.swift */; };
 		3BA82AAE24B01E730050B9A5 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4547E0822F91D5B00FA2F42 /* ReviewHelperKit.framework */; };
 		3BA82AB624B022DF0050B9A5 /* GuestDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AB524B022DF0050B9A5 /* GuestDemoApp.swift */; };
@@ -28,7 +31,6 @@
 		3BA82AEA24B026D00050B9A5 /* StatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AE524B026D00050B9A5 /* StatusData.swift */; };
 		3BA82AEB24B026D00050B9A5 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AE624B026D00050B9A5 /* StatusView.swift */; };
 		3BA82AED24B027040050B9A5 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AEC24B027040050B9A5 /* ColorUtility.swift */; };
-		3BA82AFB24B0473E0050B9A5 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AFA24B0473E0050B9A5 /* SwiftUIView.swift */; };
 		3BBE8A8D24AFA7FD00B77EAE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A8C24AFA7FD00B77EAE /* Kingfisher */; };
 		3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
@@ -210,6 +212,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B2C768A24BA169B00B26394 /* TabBarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarImageView.swift; sourceTree = "<group>"; };
+		3B2C768C24BA179900B26394 /* FordICONProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FordICONProvider.swift; sourceTree = "<group>"; };
+		3B2C768E24BA199800B26394 /* TranslationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationProvider.swift; sourceTree = "<group>"; };
+		3B2C769024BA1D5A00B26394 /* RemoteControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlButton.swift; sourceTree = "<group>"; };
 		3B7E0D2322FB022400593EB1 /* ReviewUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewUIKit.xcodeproj; path = ReviewUIKit/ReviewUIKit.xcodeproj; sourceTree = "<group>"; };
 		3B9DAC9024B36BDB009732D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3B9DAE6A24B371E1009732D3 /* ImageURLStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLStore.swift; sourceTree = "<group>"; };
@@ -234,7 +240,6 @@
 		3BA82AE524B026D00050B9A5 /* StatusData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusData.swift; sourceTree = "<group>"; };
 		3BA82AE624B026D00050B9A5 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		3BA82AEC24B027040050B9A5 /* ColorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtility.swift; sourceTree = "<group>"; };
-		3BA82AFA24B0473E0050B9A5 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewModel.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
 		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -273,7 +278,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9DAD7F24B370FA009732D3 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,15 @@
 			name = Dependency;
 			sourceTree = "<group>";
 		};
+		3B2C759624BA111600B26394 /* SupportView */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C768A24BA169B00B26394 /* TabBarImageView.swift */,
+				3B2C769024BA1D5A00B26394 /* RemoteControlButton.swift */,
+			);
+			path = SupportView;
+			sourceTree = "<group>";
+		};
 		3B7E0D2422FB022400593EB1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +335,7 @@
 		3BA82AB424B022DF0050B9A5 /* GuestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B2C759624BA111600B26394 /* SupportView */,
 				3BA82AC824B0251C0050B9A5 /* Utilities */,
 				3BA82AB524B022DF0050B9A5 /* GuestDemoApp.swift */,
 				3BA82AB724B022DF0050B9A5 /* ContentView.swift */,
@@ -329,7 +343,6 @@
 				3BA82ABE24B022E00050B9A5 /* Info.plist */,
 				3BA82ABF24B022E00050B9A5 /* GuestDemo.entitlements */,
 				3BA82ABB24B022E00050B9A5 /* Preview Content */,
-				3BA82AFA24B0473E0050B9A5 /* SwiftUIView.swift */,
 				3B9DAC9024B36BDB009732D3 /* HomeView.swift */,
 			);
 			path = GuestDemo;
@@ -348,6 +361,8 @@
 			children = (
 				3BA82AC924B0252B0050B9A5 /* FordColor.swift */,
 				3B9DAE6A24B371E1009732D3 /* ImageURLStore.swift */,
+				3B2C768C24BA179900B26394 /* FordICONProvider.swift */,
+				3B2C768E24BA199800B26394 /* TranslationProvider.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -542,7 +557,6 @@
 			);
 			name = GuestDemo;
 			packageProductDependencies = (
-				3B9DAD7E24B370FA009732D3 /* KingfisherSwiftUI */,
 			);
 			productName = GuestDemo;
 			productReference = 3BA82AB324B022DF0050B9A5 /* GuestDemo.app */;
@@ -772,8 +786,11 @@
 			files = (
 				3BA82AB824B022DF0050B9A5 /* ContentView.swift in Sources */,
 				3B9DAE6B24B371E1009732D3 /* ImageURLStore.swift in Sources */,
+				3B2C768F24BA199800B26394 /* TranslationProvider.swift in Sources */,
 				3BA82ACA24B0252B0050B9A5 /* FordColor.swift in Sources */,
-				3BA82AFB24B0473E0050B9A5 /* SwiftUIView.swift in Sources */,
+				3B2C768D24BA179900B26394 /* FordICONProvider.swift in Sources */,
+				3B2C768B24BA169B00B26394 /* TabBarImageView.swift in Sources */,
+				3B2C769124BA1D5A00B26394 /* RemoteControlButton.swift in Sources */,
 				3B9DAC9124B36BDB009732D3 /* HomeView.swift in Sources */,
 				3BA82AB624B022DF0050B9A5 /* GuestDemoApp.swift in Sources */,
 			);
@@ -882,7 +899,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.ReviewMonitor.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -908,7 +925,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.ReviewMonitor.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1189,11 +1206,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B9DAD7E24B370FA009732D3 /* KingfisherSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BBE8A8B24AFA7FC00B77EAE /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
-		};
 		3BBE8A8C24AFA7FD00B77EAE /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3BBE8A8B24AFA7FC00B77EAE /* XCRemoteSwiftPackageReference "Kingfisher" */;

@@ -12,7 +12,6 @@
 		3B13D1FA22F7D9D000FE6107 /* ReviewHelperKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B13D1EC22F7D9D000FE6107 /* ReviewHelperKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B13D20422F7DA0A00FE6107 /* ConfigurationProvidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */; };
 		3BA82AA624B01D930050B9A5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA82AA524B01D930050B9A5 /* RxCocoa */; };
-		3BA82AA824B01D930050B9A5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA82AA724B01D930050B9A5 /* RxSwift */; };
 		D4880374230689AC003478DC /* AppICONChangeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4880373230689AC003478DC /* AppICONChangeHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA82AA824B01D930050B9A5 /* RxSwift in Frameworks */,
 				3BA82AA624B01D930050B9A5 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +124,6 @@
 			name = ReviewHelperKit;
 			packageProductDependencies = (
 				3BA82AA524B01D930050B9A5 /* RxCocoa */,
-				3BA82AA724B01D930050B9A5 /* RxSwift */,
 			);
 			productName = ReviewHelperKit;
 			productReference = 3B13D1E922F7D9D000FE6107 /* ReviewHelperKit.framework */;
@@ -498,11 +495,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3BA82AA424B01D930050B9A5 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
-		};
-		3BA82AA724B01D930050B9A5 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BA82AA424B01D930050B9A5 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
