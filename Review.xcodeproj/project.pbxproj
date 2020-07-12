@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B211C0A24BAFF3B00316031 /* RemoteControlSuccessBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B211C0924BAFF3B00316031 /* RemoteControlSuccessBannerView.swift */; };
 		3B2C768B24BA169B00B26394 /* TabBarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768A24BA169B00B26394 /* TabBarImageView.swift */; };
 		3B2C768D24BA179900B26394 /* FordICONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768C24BA179900B26394 /* FordICONProvider.swift */; };
 		3B2C768F24BA199800B26394 /* TranslationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768E24BA199800B26394 /* TranslationProvider.swift */; };
@@ -31,8 +32,12 @@
 		3BA82AEA24B026D00050B9A5 /* StatusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AE524B026D00050B9A5 /* StatusData.swift */; };
 		3BA82AEB24B026D00050B9A5 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AE624B026D00050B9A5 /* StatusView.swift */; };
 		3BA82AED24B027040050B9A5 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA82AEC24B027040050B9A5 /* ColorUtility.swift */; };
+		3BAC0E6124BAF57A0082CBB5 /* BlueVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC0E6024BAF57A0082CBB5 /* BlueVehicleView.swift */; };
+		3BAC0E6324BAF65D0082CBB5 /* FocusVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC0E6224BAF65D0082CBB5 /* FocusVehicleView.swift */; };
+		3BAC0E6524BAF8200082CBB5 /* RemoteControlStartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC0E6424BAF8200082CBB5 /* RemoteControlStartStopButton.swift */; };
 		3BBE8A8D24AFA7FD00B77EAE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3BBE8A8C24AFA7FD00B77EAE /* Kingfisher */; };
 		3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */; };
+		3BF24D6324BAF04E00D7879E /* UserExperenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF24D6224BAF04E00D7879E /* UserExperenceType.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
 		82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5A21E046F10048EFB9 /* SettingViewController.swift */; };
@@ -212,6 +217,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B211C0924BAFF3B00316031 /* RemoteControlSuccessBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlSuccessBannerView.swift; sourceTree = "<group>"; };
 		3B2C768A24BA169B00B26394 /* TabBarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarImageView.swift; sourceTree = "<group>"; };
 		3B2C768C24BA179900B26394 /* FordICONProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FordICONProvider.swift; sourceTree = "<group>"; };
 		3B2C768E24BA199800B26394 /* TranslationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationProvider.swift; sourceTree = "<group>"; };
@@ -240,7 +246,11 @@
 		3BA82AE524B026D00050B9A5 /* StatusData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusData.swift; sourceTree = "<group>"; };
 		3BA82AE624B026D00050B9A5 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		3BA82AEC24B027040050B9A5 /* ColorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtility.swift; sourceTree = "<group>"; };
+		3BAC0E6024BAF57A0082CBB5 /* BlueVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueVehicleView.swift; sourceTree = "<group>"; };
+		3BAC0E6224BAF65D0082CBB5 /* FocusVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusVehicleView.swift; sourceTree = "<group>"; };
+		3BAC0E6424BAF8200082CBB5 /* RemoteControlStartStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlStartStopButton.swift; sourceTree = "<group>"; };
 		3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewModel.swift; sourceTree = "<group>"; };
+		3BF24D6224BAF04E00D7879E /* UserExperenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExperenceType.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
 		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
 		82766C5A21E046F10048EFB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +329,8 @@
 			children = (
 				3B2C768A24BA169B00B26394 /* TabBarImageView.swift */,
 				3B2C769024BA1D5A00B26394 /* RemoteControlButton.swift */,
+				3BAC0E6424BAF8200082CBB5 /* RemoteControlStartStopButton.swift */,
+				3B211C0924BAFF3B00316031 /* RemoteControlSuccessBannerView.swift */,
 			);
 			path = SupportView;
 			sourceTree = "<group>";
@@ -335,6 +347,8 @@
 		3BA82AB424B022DF0050B9A5 /* GuestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3BAC0E5824BAF56D0082CBB5 /* Home */,
+				3BF24D5A24BAF02400D7879E /* Model */,
 				3B2C759624BA111600B26394 /* SupportView */,
 				3BA82AC824B0251C0050B9A5 /* Utilities */,
 				3BA82AB524B022DF0050B9A5 /* GuestDemoApp.swift */,
@@ -359,10 +373,10 @@
 		3BA82AC824B0251C0050B9A5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3B2C768E24BA199800B26394 /* TranslationProvider.swift */,
 				3BA82AC924B0252B0050B9A5 /* FordColor.swift */,
 				3B9DAE6A24B371E1009732D3 /* ImageURLStore.swift */,
 				3B2C768C24BA179900B26394 /* FordICONProvider.swift */,
-				3B2C768E24BA199800B26394 /* TranslationProvider.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -381,6 +395,23 @@
 				3BA82AD924B026570050B9A5 /* Info.plist */,
 			);
 			path = StatusWidget;
+			sourceTree = "<group>";
+		};
+		3BAC0E5824BAF56D0082CBB5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3BAC0E6024BAF57A0082CBB5 /* BlueVehicleView.swift */,
+				3BAC0E6224BAF65D0082CBB5 /* FocusVehicleView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3BF24D5A24BAF02400D7879E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BF24D6224BAF04E00D7879E /* UserExperenceType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		82766C5921E046D20048EFB9 /* Setting */ = {
@@ -784,9 +815,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B211C0A24BAFF3B00316031 /* RemoteControlSuccessBannerView.swift in Sources */,
+				3BAC0E6324BAF65D0082CBB5 /* FocusVehicleView.swift in Sources */,
 				3BA82AB824B022DF0050B9A5 /* ContentView.swift in Sources */,
 				3B9DAE6B24B371E1009732D3 /* ImageURLStore.swift in Sources */,
+				3BF24D6324BAF04E00D7879E /* UserExperenceType.swift in Sources */,
 				3B2C768F24BA199800B26394 /* TranslationProvider.swift in Sources */,
+				3BAC0E6124BAF57A0082CBB5 /* BlueVehicleView.swift in Sources */,
+				3BAC0E6524BAF8200082CBB5 /* RemoteControlStartStopButton.swift in Sources */,
 				3BA82ACA24B0252B0050B9A5 /* FordColor.swift in Sources */,
 				3B2C768D24BA179900B26394 /* FordICONProvider.swift in Sources */,
 				3B2C768B24BA169B00B26394 /* TabBarImageView.swift in Sources */,

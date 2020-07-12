@@ -10,9 +10,31 @@ import SwiftUI
 
 @main
 struct GuestDemoApp: App {
+    
+    var userExperence = UserExperence()
+    @State var didGetURL = false
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userExperence)
+                .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { userActivity in
+                    guard let url = userActivity.webpageURL, !didGetURL else { return }
+                    
+                    didGetURL.toggle()
+                    
+                    if url.absoluteString.contains(UserExperenceType.blue.rawValue) {
+                        userExperence.userExperenceType = .blue
+                    } else if url.absoluteString.contains(UserExperenceType.focus.rawValue) {
+                        userExperence.userExperenceType = .focus
+                    } else {
+                        userExperence.userExperenceType = .unknow
+                    }
+                    
+                    DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+                        didGetURL.toggle()
+                    }
+                }
         }
     }
 }

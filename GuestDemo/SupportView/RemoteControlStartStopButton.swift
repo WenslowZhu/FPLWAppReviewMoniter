@@ -1,5 +1,5 @@
 //
-//  RemoteControlButton.swift
+//  RemoteControlStartStopButton.swift
 //  GuestDemo
 //
 //  Created by 朱廷 on 2020/7/12.
@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct RemoteControlButton: View {
-        
+struct RemoteControlStartStopButton: View {
+    
     @EnvironmentObject var userExperence: UserExperence
     @Binding var longPressSwitch: LongPressSwitch
     @State var rotateAnimation: Bool = false
@@ -17,8 +17,8 @@ struct RemoteControlButton: View {
     @State var remoteControlSuccess = false
     @State var showProgressAnimation = false
     
-    var defaultImage: String
-    var successImage: String
+    var startImage: String
+    var stopImage: String
     
     var body: some View {
         ZStack {
@@ -28,7 +28,7 @@ struct RemoteControlButton: View {
             RemoteControlCircleView(circleViewShouldShow: circleViewShouldShow,
                                     rotateAnimation: rotateAnimation)
             
-            Image(remoteControlSuccess ? successImage : defaultImage)
+            Image(remoteControlSuccess ? stopImage : startImage)
                 .resizable()
                 .scaledToFit()
                 .onLongPressGesture {
@@ -46,7 +46,6 @@ struct RemoteControlButton: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             
                             self.showProgressAnimation = false
-                            self.remoteControlSuccess = false
                             self.circleViewShouldShow = true
                             
                             // 出现 Circle View 的动画
@@ -58,7 +57,7 @@ struct RemoteControlButton: View {
                             
                             // 5 秒后，动画结束
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                self.remoteControlSuccess = true
+                                self.remoteControlSuccess.toggle()
                                 self.circleViewShouldShow = false
                                 self.rotateAnimation = false
                                 self.longPressSwitch.isLongPress = false
@@ -71,46 +70,21 @@ struct RemoteControlButton: View {
                         }
                     }
                 }
+            
+            Text(remoteControlSuccess ? TranslationProvider.home.focusStop : TranslationProvider.home.focusStart)
+                .font(.headline)
+                .foregroundColor(remoteControlSuccess ? .black : .white)
+                .padding(EdgeInsets(top: -12, leading: 0, bottom: 0, trailing: 0))
         }
         .padding(5)
     }
 }
 
-struct RemoteControlCircleView: View {
-    
-    var circleViewShouldShow: Bool
-    var rotateAnimation: Bool
-    
-    var body: some View {
-        Circle()
-            .trim(from: 0.0, to: 0.3)
-            .stroke(style: StrokeStyle(lineWidth: 6,
-                                       lineCap: .round,
-                                       lineJoin: .round))
-            .foregroundColor(circleViewShouldShow ? FordColor.primary_blue_outline.color : .clear)
-            .rotationEffect(.degrees(rotateAnimation ? 360 : 0), anchor: .center)
-            
-    }
-}
-
-struct PrepareCircleView: View {
-    var showProgressAnimation: Bool
-    
-    var body: some View {
-        Circle()
-            .trim(from: 0.0, to: showProgressAnimation ? 1 : 0)
-            .stroke(style: StrokeStyle(lineWidth: 6,
-                                       lineCap: .round,
-                                       lineJoin: .round))
-            .foregroundColor(FordColor.primary_blue_outline.color)
-            .rotationEffect(Angle(degrees: -90))
-    }
-}
-
-struct RemoteControlButton_Previews: PreviewProvider {
+struct RemoteControlStartStopButton_Previews: PreviewProvider {
     static var previews: some View {
-        RemoteControlButton(longPressSwitch: .constant(.default),
-                            defaultImage: FordICONProvider.home.blueCooling,
-                            successImage: FordICONProvider.home.blueCoolingSucceed)
+        RemoteControlStartStopButton(longPressSwitch: .constant(.default),
+                                     startImage: FordICONProvider.home.focusStart,
+                                     stopImage: FordICONProvider.home.focusStop)
+            .previewLayout(.fixed(width: 90, height: 90))
     }
 }

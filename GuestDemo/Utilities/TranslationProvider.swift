@@ -14,4 +14,7 @@ struct TranslationProvider {
 
 struct HomeTranslation {
     let title = "首页"
+    let focusStart = "启动"
+    let focusStop = "熄火"
+    let remoteControlSuccess = "远控成功"
 }

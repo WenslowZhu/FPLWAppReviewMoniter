@@ -10,55 +10,60 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var longPressSwitch = LongPressSwitch.default
-    
-    init() {
-        UINavigationBar.appearance().barTintColor = FordColor.background.hexColor
-        
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: FordColor.text_100.hexColor]
-    }
-    
+    @EnvironmentObject var userExperence: UserExperence
+
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .top) {
                 FordColor.background.color
-                VStack {
-                    Image(FordICONProvider.home.vehicle)
-                        .padding()
+                
+                VStack() {
                     
-                    HStack {
-                        RemoteControlButton(longPressSwitch: $longPressSwitch,
-                                            defaultImage: FordICONProvider.home.blueCooling,
-                                            successImage: FordICONProvider.home.blueCoolingSucceed)
-                            .frame(width: 80, height: 80, alignment: .center)
-                        
-                        RemoteControlButton(longPressSwitch: $longPressSwitch,
-                                            defaultImage: FordICONProvider.home.blueLock,
-                                            successImage: FordICONProvider.home.blueLockSucceed)
-                            .frame(width: 90, height: 90, alignment: .center)
-                        
-                        RemoteControlButton(longPressSwitch: $longPressSwitch,
-                                            defaultImage: FordICONProvider.home.blueUnlock,
-                                            successImage: FordICONProvider.home.blueUnlockSucceed)
-                            .frame(width: 90, height: 90, alignment: .center)
-
-                        RemoteControlButton(longPressSwitch: $longPressSwitch,
-                                            defaultImage: FordICONProvider.home.blueHeating,
-                                            successImage: FordICONProvider.home.blueHeatingSucceed)
-                            .frame(width: 80, height: 80, alignment: .center)
+                    if userExperence.remoteControlSuccess {
+                        RemoteControlSuccessBannerView()
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    withAnimation(.spring()) {
+                                        userExperence.remoteControlSuccess = false
+                                    }
+                                }
+                            }
+                    } else {
+                        RemoteControlSuccessBannerView()
+                            .hidden()
                     }
+
+                    Spacer()
+                    
+                    switch userExperence.userExperenceType {
+                    case .blue:
+                        BlueVehicleView()
+                    case .focus:
+                        FocusVehicleView()
+                    default:
+                        Text("Home")
+                    }
+                    
+                    Spacer()
                 }
             }
             .navigationBarTitle(Text(TranslationProvider.home.title),
                                 displayMode: .inline)
         }
+        .onAppear {
+            UINavigationBar.appearance().barTintColor = FordColor.background.hexColor
+            
+            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: FordColor.text_100.hexColor]
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
+    
     static var previews: some View {
         Group {
             HomeView()
+                .environmentObject(UserExperence.blueDemo)
                 .preferredColorScheme(.dark)
         }
     }

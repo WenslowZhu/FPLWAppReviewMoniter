@@ -27,7 +27,7 @@ struct TabBarICON {
 }
 
 struct HomeICON {
-    let vehicle = "home/vehicle"
+    let blueVehicle = "home/blue"
     let blueCooling = "home/blueCooling"
     let blueCoolingSucceed = "home/blueCoolingSucceed"
     let blueHeating = "home/blueHeating"
@@ -36,4 +36,12 @@ struct HomeICON {
     let blueLockSucceed = "home/blueLockSucceed"
     let blueUnlock = "home/blueUnlock"
     let blueUnlockSucceed = "home/blueUnlockSucceed"
+    
+    let focusVehicle = "home/focus"
+    let focusLock = "home/focusLock"
+    let focusLockeSucceed = "home/focusLockeSucceed"
+    let focusStart = "home/focusStart"
+    let focusStop = "home/focusStop"
+    let focusUnlock = "home/focusUnlock"
+    let focusUnlockSucceed = "home/focusUnlockSucceed"
 }

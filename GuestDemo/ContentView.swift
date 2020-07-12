@@ -10,15 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var userExperence: UserExperence
     @State private var selection = 0
-    
-    init() {
-        UITabBar.appearance().barTintColor = FordColor.background.hexColor
-    }
     
     var body: some View {
         TabView(selection: $selection) {
             HomeView()
+                .environmentObject(userExperence)
                 .tabItem {
                     if selection == 0 {
                         TabBarImageView(imageName: FordICONProvider.tabBarICON.homeActive,
@@ -84,12 +82,16 @@ struct ContentView: View {
                 .tag(4)
         }
         .accentColor(FordColor.text_100.color)
+        .onAppear {
+            UITabBar.appearance().barTintColor = FordColor.background.hexColor
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(UserExperence.blueDemo)
             .preferredColorScheme(.dark)
     }
 }
