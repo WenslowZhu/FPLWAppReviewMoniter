@@ -11,6 +11,7 @@ import Foundation
 struct FordICONProvider {
     static let tabBarICON = TabBarICON()
     static let home = HomeICON()
+    static let vehicle = VehicleICON()
 }
 
 struct TabBarICON {
@@ -44,4 +45,8 @@ struct HomeICON {
     let focusStop = "home/focusStop"
     let focusUnlock = "home/focusUnlock"
     let focusUnlockSucceed = "home/focusUnlockSucceed"
+}
+
+struct VehicleICON {
+    let vehicleLocation = "vehicle/vehicleLocation"
 }

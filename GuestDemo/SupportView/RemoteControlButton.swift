@@ -57,7 +57,7 @@ struct RemoteControlButton: View {
                             }
                             
                             // 5 秒后，动画结束
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
                                 self.remoteControlSuccess = true
                                 self.circleViewShouldShow = false
                                 self.rotateAnimation = false
