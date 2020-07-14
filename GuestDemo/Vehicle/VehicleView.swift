@@ -18,16 +18,16 @@ struct VehicleView: View {
                     MapView()
                         .frame(height: 200)
                     
-                    VehiœcleViewCell(title: "🔋", value: 0.4)
+                    VehicleViewCell(title: "🔋", value: 0.4)
                         .frame(height: 100)
                     
                     VehicleViewCell(title: "🚗", value: 0.6)
                         .frame(height: 100)
                     
-                    VehicleViewCell(title: "⛽️", value: 0.4)
+                    VehicleViewCell(title: "⛽️", value: 0.2)
                         .frame(height: 100)
                     
-                    VehicleViewCell(title: "💰", value: 0.4)
+                    VehicleViewCell(title: "💰", value: 0.9)
                         .frame(height: 100)
                 }
             }

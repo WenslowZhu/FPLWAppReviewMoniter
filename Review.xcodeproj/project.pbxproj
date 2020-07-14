@@ -12,6 +12,8 @@
 		3B2C768D24BA179900B26394 /* FordICONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768C24BA179900B26394 /* FordICONProvider.swift */; };
 		3B2C768F24BA199800B26394 /* TranslationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C768E24BA199800B26394 /* TranslationProvider.swift */; };
 		3B2C769124BA1D5A00B26394 /* RemoteControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C769024BA1D5A00B26394 /* RemoteControlButton.swift */; };
+		3B97681C24BDF54300B54658 /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B97681B24BDF54300B54658 /* SignInWithAppleView.swift */; };
+		3B97681E24BDF62000B54658 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B97681D24BDF62000B54658 /* SignInWithAppleButton.swift */; };
 		3B9DAC9124B36BDB009732D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DAC9024B36BDB009732D3 /* HomeView.swift */; };
 		3B9DAE6B24B371E1009732D3 /* ImageURLStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DAE6A24B371E1009732D3 /* ImageURLStore.swift */; };
 		3BA82AAE24B01E730050B9A5 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4547E0822F91D5B00FA2F42 /* ReviewHelperKit.framework */; };
@@ -227,6 +229,8 @@
 		3B2C768E24BA199800B26394 /* TranslationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationProvider.swift; sourceTree = "<group>"; };
 		3B2C769024BA1D5A00B26394 /* RemoteControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlButton.swift; sourceTree = "<group>"; };
 		3B7E0D2322FB022400593EB1 /* ReviewUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewUIKit.xcodeproj; path = ReviewUIKit/ReviewUIKit.xcodeproj; sourceTree = "<group>"; };
+		3B97681B24BDF54300B54658 /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
+		3B97681D24BDF62000B54658 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		3B9DAC9024B36BDB009732D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3B9DAE6A24B371E1009732D3 /* ImageURLStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLStore.swift; sourceTree = "<group>"; };
 		3BA82AB324B022DF0050B9A5 /* GuestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,9 +357,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3B97681324BDF53300B54658 /* SignInWithApple */ = {
+			isa = PBXGroup;
+			children = (
+				3B97681B24BDF54300B54658 /* SignInWithAppleView.swift */,
+				3B97681D24BDF62000B54658 /* SignInWithAppleButton.swift */,
+			);
+			path = SignInWithApple;
+			sourceTree = "<group>";
+		};
 		3BA82AB424B022DF0050B9A5 /* GuestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B97681324BDF53300B54658 /* SignInWithApple */,
 				3BC72BAB24BC9D6900398330 /* Vehicle */,
 				3BAC0E5824BAF56D0082CBB5 /* Home */,
 				3BF24D5A24BAF02400D7879E /* Model */,
@@ -835,9 +849,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B97681E24BDF62000B54658 /* SignInWithAppleButton.swift in Sources */,
 				3B211C0A24BAFF3B00316031 /* RemoteControlSuccessBannerView.swift in Sources */,
 				3BAC0E6324BAF65D0082CBB5 /* FocusVehicleView.swift in Sources */,
 				3BC72BBB24BCA2F000398330 /* CircleProcessView.swift in Sources */,
+				3B97681C24BDF54300B54658 /* SignInWithAppleView.swift in Sources */,
 				3BA82AB824B022DF0050B9A5 /* ContentView.swift in Sources */,
 				3B9DAE6B24B371E1009732D3 /* ImageURLStore.swift in Sources */,
 				3BF24D6324BAF04E00D7879E /* UserExperenceType.swift in Sources */,

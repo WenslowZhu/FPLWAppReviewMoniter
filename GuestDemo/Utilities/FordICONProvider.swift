@@ -12,6 +12,7 @@ struct FordICONProvider {
     static let tabBarICON = TabBarICON()
     static let home = HomeICON()
     static let vehicle = VehicleICON()
+    static let signIn = SignInICON()
 }
 
 struct TabBarICON {
@@ -49,4 +50,8 @@ struct HomeICON {
 
 struct VehicleICON {
     let vehicleLocation = "vehicle/vehicleLocation"
+}
+
+struct SignInICON {
+    let vehicleLanding = "SignIn/vehicleLanding"
 }

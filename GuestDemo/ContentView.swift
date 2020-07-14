@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var userExperence: UserExperence
-    @State private var selection = 1
+    @State private var selection = 2
     
     var body: some View {
         TabView(selection: $selection) {
@@ -42,7 +42,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            HomeView()
+            SignInWithAppleView()
                 .tabItem {
                     if selection == 2 {
                         TabBarImageView(imageName: FordICONProvider.tabBarICON.mapActive,
