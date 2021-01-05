@@ -35,14 +35,14 @@ struct HomeView: View {
 
                     Spacer()
                     
-                    switch userExperence.userExperenceType {
-                    case .blue:
+//                    switch userExperence.userExperenceType {
+//                    case .blue:
                         BlueVehicleView()
-                    case .focus:
-                        FocusVehicleView()
-                    default:
-                        Text("Home")
-                    }
+//                    case .focus:
+//                        FocusVehicleView()
+//                    default:
+//                        Text("Home")
+//                    }
                     
                     Spacer()
                 }

@@ -42,6 +42,7 @@
 		3BC72BB624BC9DD900398330 /* VehicleLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC72BB524BC9DD900398330 /* VehicleLocationView.swift */; };
 		3BC72BB824BCA1B400398330 /* VehicleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC72BB724BCA1B400398330 /* VehicleViewCell.swift */; };
 		3BC72BBB24BCA2F000398330 /* CircleProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC72BBA24BCA2F000398330 /* CircleProcessView.swift */; };
+		3BCC53CA252A00C000378082 /* BingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC53C4252A00BB00378082 /* BingImageView.swift */; };
 		3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */; };
 		3BF24D6324BAF04E00D7879E /* UserExperenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF24D6224BAF04E00D7879E /* UserExperenceType.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
@@ -261,6 +262,7 @@
 		3BC72BB524BC9DD900398330 /* VehicleLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationView.swift; sourceTree = "<group>"; };
 		3BC72BB724BCA1B400398330 /* VehicleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewCell.swift; sourceTree = "<group>"; };
 		3BC72BBA24BCA2F000398330 /* CircleProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProcessView.swift; sourceTree = "<group>"; };
+		3BCC53C4252A00BB00378082 /* BingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingImageView.swift; sourceTree = "<group>"; };
 		3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewModel.swift; sourceTree = "<group>"; };
 		3BF24D6224BAF04E00D7879E /* UserExperenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExperenceType.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 				3BA82AD524B026560050B9A5 /* StatusWidget.swift */,
 				3BA82AD724B026570050B9A5 /* Assets.xcassets */,
 				3BA82AD924B026570050B9A5 /* Info.plist */,
+				3BCC53C4252A00BB00378082 /* BingImageView.swift */,
 			);
 			path = StatusWidget;
 			sourceTree = "<group>";
@@ -640,6 +643,8 @@
 			dependencies = (
 			);
 			name = StatusWidgetExtension;
+			packageProductDependencies = (
+			);
 			productName = StatusWidgetExtension;
 			productReference = 3BA82ACF24B026560050B9A5 /* StatusWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -880,6 +885,7 @@
 				3BA82AD624B026560050B9A5 /* StatusWidget.swift in Sources */,
 				3BA82AEB24B026D00050B9A5 /* StatusView.swift in Sources */,
 				3BA82AEA24B026D00050B9A5 /* StatusData.swift in Sources */,
+				3BCC53CA252A00C000378082 /* BingImageView.swift in Sources */,
 				3BA82AE924B026D00050B9A5 /* CircleProcessView.swift in Sources */,
 				3BA82AED24B027040050B9A5 /* ColorUtility.swift in Sources */,
 				3BA82AE824B026D00050B9A5 /* GradientView.swift in Sources */,
@@ -961,7 +967,7 @@
 				CODE_SIGN_ENTITLEMENTS = GuestDemo/GuestDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_ASSET_PATHS = "\"GuestDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
 				ENABLE_PREVIEWS = YES;
@@ -987,7 +993,7 @@
 				CODE_SIGN_ENTITLEMENTS = GuestDemo/GuestDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_ASSET_PATHS = "\"GuestDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
 				ENABLE_PREVIEWS = YES;
@@ -1013,8 +1019,12 @@
 				CODE_SIGN_ENTITLEMENTS = StatusWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = StatusWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1026,7 +1036,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.ReviewMonitor.StatusWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1040,8 +1050,12 @@
 				CODE_SIGN_ENTITLEMENTS = StatusWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = StatusWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1053,7 +1067,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.ReviewMonitor.StatusWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1185,7 +1199,7 @@
 				CODE_SIGN_ENTITLEMENTS = Review/Review.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Review/Info.plist;
@@ -1197,9 +1211,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.ReviewMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1211,7 +1225,7 @@
 				CODE_SIGN_ENTITLEMENTS = Review/Review.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Review/Info.plist;
@@ -1223,9 +1237,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.ReviewMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

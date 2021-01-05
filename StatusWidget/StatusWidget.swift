@@ -10,43 +10,44 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    public typealias Entry = SimpleEntry
-
-    // 放置预览数据
-    public func snapshot(with context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    
+    func placeholder(in context: Context) -> SimpleEntry {
+        return SimpleEntry(data: StatusData.demo)
+    }
+    
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(data: StatusData.demo)
         completion(entry)
-        
     }
-
-    public func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
         
+        let url = URL(string: "https://bing.ioliu.cn/v1/rand")!
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            // 5 分钟刷新一次
-            let currentDate = Date()
-            let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+        let session = URLSession.shared.dataTask(with: url) { (data, _, _) in
+            let widgeData = StatusData.evDemo
+            widgeData.imageData = data!
             
-            let entries: [SimpleEntry] = [SimpleEntry(data: StatusData.evDemo)]
+            // 60 分钟刷新一次
+            let currentDate = Date()
+            let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
+            
+            let entries: [SimpleEntry] = [SimpleEntry(data: widgeData)]
             
             let timeline = Timeline(entries: entries, policy: .after(refreshDate))
             completion(timeline)
         }
         
+        session.resume()
     }
+    
+    public typealias Entry = SimpleEntry
 }
 
 struct SimpleEntry: TimelineEntry {
     let date = Date()
     
     public let data: StatusData
-}
-
-struct PlaceholderView : View {
-    var body: some View {
-//        ContentView().environmentObject(StatusData.demo)
-        Text("Placeholder")
-    }
 }
 
 struct EVWidgetEntryView : View {
@@ -63,7 +64,7 @@ struct EVWidget: Widget {
     private let kind: String = "EVWidget"
 
     public var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider(), placeholder: PlaceholderView()) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             EVWidgetEntryView(entry: entry)
         }
         .supportedFamilies([.systemSmall])
@@ -84,11 +85,32 @@ struct StatusWidge: Widget {
     private let kind: String = "StatusWidge"
 
     public var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider(), placeholder: PlaceholderView()) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             StatusWidgeEntryView(entry: entry)
         }
         .supportedFamilies([.systemMedium])
         .configurationDisplayName("Status Widget")
+        .description("This is an example widget.")
+    }
+}
+
+struct BingImageWidgeEntryView : View {
+    var entry: Provider.Entry
+
+    var body: some View {
+        BingImageView().environmentObject(entry.data)
+    }
+}
+
+struct BingImageWidge: Widget {
+    private let kind: String = "BingImageWidge"
+
+    public var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            BingImageWidgeEntryView(entry: entry)
+        }
+        .supportedFamilies([.systemMedium])
+        .configurationDisplayName("Bing Image Widget")
         .description("This is an example widget.")
     }
 }
@@ -104,6 +126,7 @@ struct EVWidget_Previews: PreviewProvider {
 struct SwiftWidgetsBundle: WidgetBundle {
     @WidgetBundleBuilder
     var body: some Widget {
+        BingImageWidge()
         EVWidget()
         StatusWidge()
     }

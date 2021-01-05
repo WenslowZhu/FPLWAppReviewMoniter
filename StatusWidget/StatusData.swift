@@ -17,6 +17,7 @@ class StatusData: ObservableObject {
     @Published var mileagePercent: CGFloat
     @Published var mileage: Int
     @Published var isCharging: Bool
+    @Published var imageData: Data?
     
     init(powerPercent: CGFloat,
          fuelPercent: CGFloat,
